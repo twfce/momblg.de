@@ -12,6 +12,6 @@ services:
       - VIRTUAL_PROTO
       - VIRTUAL_HOST
       - LETSENCRYPT_HOST
-      - URL
+      - url=${URL}
     volumes:
       - momblg-data:/var/lib/ghost/content
