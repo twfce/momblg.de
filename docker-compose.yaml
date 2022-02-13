@@ -1,0 +1,17 @@
+version: "3"
+volumes:
+  momblg-data:
+
+services:
+  blog:
+    image: ghost:latest
+    ports:
+      - 127.0.0.1:7452:2368
+    environment:
+      - VIRTUAL_PORT
+      - VIRTUAL_PROTO
+      - VIRTUAL_HOST
+      - LETSENCRYPT_HOST
+      - URL
+    volumes:
+      - momblg-data:/var/lib/ghost/content
